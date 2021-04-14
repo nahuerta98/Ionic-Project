@@ -1,5 +1,7 @@
 {
-  "name": "IonicProject",
-  "integrations": {},
+  "name": "RickAndMortyApp",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="characters-list"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="flag" color="dark">
+    <!-- Character Profile Picture -->
+    <img class="character" [src]="character.image">
+
+
+    <ion-text>
+        <h1> {{character.name}} </h1>
+        <p> {{character.gender}} - {{character.status}} </p>
+    </ion-text>
+
+    <!-- List Of Chapters -->
+    <ion-list>
+        <ion-item *ngFor="let episode of episodes" color="success" (click)="episodeDetails(episode.id)">
+            <ion-avatar slot="start">
+                <img src="https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b">
+            </ion-avatar>
+            <ion-label> {{episode.name}} </ion-label>
+        </ion-item>
+    </ion-list>
+
+</ion-content>

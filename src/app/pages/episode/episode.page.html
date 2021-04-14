@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="characters-list"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="flag" color="dark">
+    <ion-text>
+        <h1> {{episode.id}} - {{episode.name}} </h1>
+        <p> {{ episode.air_date }} </p>
+    </ion-text>
+
+
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+    <img class="avatar" src="../../../assets/images/avatar.jpg">
+    <p class="title"> Login </p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <ion-input type="email" placeholder="Email" formControlName="email" [class.is-invalid]="isValid('email')"></ion-input>
+        <div *ngIf="isValid('email')">
+            <p class="text-center m-0">Email is required. Min 5 characters.</p>
+        </div>
+        <ion-input type="password" placeholder="Password " formControlName="password" [class.is-invalid]="isValid('password')"></ion-input>
+        <div *ngIf="isValid('password')">
+            <p class="text-center m-0">password is required. Min 8 characters.</p>
+        </div>
+
+        <ion-button expand="block" color="success" type="submit" [disabled]="!loginForm.valid"> Login </ion-button>
+    </form>
+
+    <p (click)="forgotPassword()"> Forgot Password? </p>
+
+</ion-content>

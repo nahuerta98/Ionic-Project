@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="characters-list"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="flag" color="dark">
+    <!-- Character Profile Picture -->
+    <img class="profile" src="../../../assets/images/profile.gif">
+    <ion-text>
+        <h1> {{user.firstName}} {{user.lastName}}</h1>
+        <p> {{user.email}} </p>
+    </ion-text>
+
+    <!-- Favorites List  -->
+    <ion-list>
+        <ion-item color="light" routerLink="/character-profile">
+            <ion-avatar slot="start">
+                <img src="https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b">
+            </ion-avatar>
+            <ion-label> Favorite </ion-label>
+        </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" color="secondary" (click)="logout()"> Logout </ion-button>
+
+
+
+</ion-content>

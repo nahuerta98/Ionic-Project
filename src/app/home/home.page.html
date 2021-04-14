@@ -1,20 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-     Hello World
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="dark" [fullscreen]="true">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-row>
+    <img class="header animate__animated animate__zoomIn " src="../../assets/images/logo.png">
+  </ion-row>
+  <ion-row>
+    <img class="logo animate__animated animate__zoomIn" src="../../assets/images/home.png">
+  </ion-row>
+  <ion-text>
+    <h1> Welcome </h1>
+    <p> Get started by loggin into your account </p>
+  </ion-text>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!---->
+  <ion-button expand="block" color="success" (click)="Login()"> Login </ion-button>
+  <p> | or | </p>
+  <ion-button expand="block" color="success" (click)="Register()"> Register </ion-button>
+
 </ion-content>
